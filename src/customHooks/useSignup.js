@@ -11,7 +11,6 @@ const useSignup = () => {
   const [password, setPassword] = useState("");
   const success = useSelector((state) => state.SignupSlice.success);
   useEffect(() => {
-    console.log(success, "mas fsjdfkddddddddddddddddddddddd");
     if (success) {
       navigate("/");
     }
