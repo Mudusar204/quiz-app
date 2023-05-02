@@ -17,19 +17,22 @@ const useQuiz = () => {
   };
   const addResult = async (marks, questions, catagory) => {
     try {
+      const date = new Date();
       if ((marks / questions.length) * 100 > 33) {
         const docRef = await addDoc(collection(db, `${name}`), {
           totalMarks: questions.length,
           obtainedMarks: marks,
-          createdAt: new Date(),
+          createdAt: date.toLocaleDateString(),
           status: "pass",
           catagory: catagory,
         });
       } else {
-        const docRef = await addDoc(collection(db, "userResult"), {
+        const date = new Date();
+        console.log(date.toLocaleDateString(), "date from result");
+        const docRef = await addDoc(collection(db, `${name}`), {
           totalMarks: questions.length,
           obtainedMarks: marks,
-          createdAt: new Date(),
+          createdAt: date.toLocaleDateString(),
           status: "fail",
           catagory: catagory,
         });

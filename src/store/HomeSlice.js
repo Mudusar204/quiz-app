@@ -53,7 +53,7 @@ export const getQuestions = createAsyncThunk(
     const limit = getState().HomeSlice.limit;
     const category = getState().HomeSlice.category;
     const res = await baseURL.get(
-      `/v1/questions?apiKey=1HQZlIgnEwr4U0AmrEJunTl1eSKqL8QfbcWCysUv & limit=2 & category=${
+      `/v1/questions?apiKey=1HQZlIgnEwr4U0AmrEJunTl1eSKqL8QfbcWCysUv & category=${
         category ? category : ""
       }`
     );

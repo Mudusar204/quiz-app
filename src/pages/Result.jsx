@@ -101,7 +101,7 @@ const Result = () => {
                 >
                   Date
                 </label>
-                <p className="text-gray-700 text-base">{item.catagory}</p>
+                <p className="text-gray-700 text-base">{item.createdAt}</p>
               </div>
               <div className="mb-4 flex justify-between">
                 <label
