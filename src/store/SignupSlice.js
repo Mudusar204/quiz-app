@@ -25,7 +25,7 @@ export const SignupAuth = createAsyncThunk(
       toast.success("SignUp Successfully");
       return true;
     } catch (error) {
-      toast.error("Enter min 6 digit password");
+      toast.error("error");
     }
   }
 );

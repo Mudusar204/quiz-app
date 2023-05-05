@@ -54,8 +54,14 @@ const Signup = () => {
                 id="password"
                 type="password"
                 name="password"
+                minLength={6}
                 required
               />
+              {password.length > 0 && password.length < 6 && (
+                <p className="text-red-500 text-xs mt-1">
+                  Password must be at least 6 characters
+                </p>
+              )}
             </div>
             <div>
               <button
